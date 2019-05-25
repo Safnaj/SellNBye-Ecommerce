@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!--BootStrap & JS Files-->
+    <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="js/Controller.js" type="text/javascript"></script>
+    <script src="js/OrderController.js" type="text/javascript"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/AdminStyle.css" rel="stylesheet">
+    <!--BootStrap & JS Files-->
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--Sidebar-->
+            <div class="col-sm-2">
+                <div class="SideBar">
+                    <h2>Admin Panel</h2>
+                    <br>
+                    <br>
+                    <ul id="Side_Menu" class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="Index.html">
+                                <span class="glyphicon glyphicon-home"></span>Make Order</a></i>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ManageOrder.html">
+                                <span class="glyphicon glyphicon-file"></span>Manage Order</a></i>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Cart.html">
+                                <span class="glyphicon glyphicon-book"></span>My cart</a></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--Sidebar-->
+
+            <div class="col-sm-10">
+                <h2>Make New Order</h2>
+                <div class="alert alert-danger" role="alert" id="msgLogin">
+
+                </div>
+                <br>
+                <div>
+                    <form id="MakeOrder" method="post" action="">
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="Items"><span class="FieldInfo">No Of Items :</span></label>
+                                <input class="form-control" type="text" name="items" id="items" placeholder="No of Items">
+                            </div>
+                            <div class="form-group">
+                                <label for="Total"><span class="FieldInfo">Total :</span></label>
+                                <input class="form-control" type="text" name="total" id="total" placeholder="Total">
+                            </div>
+                            <div class="form-group">
+                                <label for="date"><span class="FieldInfo">Order Date :</span></label>
+                                <input class="form-control" type="text" name="date" id="date" placeholder="Order Date">
+                            </div>
+                            <div class="form-group">
+                                <label for="Payement"><span class="FieldInfo">Payement Status:</span></label>
+                                <input class="form-control" type="text" name="payement" id="payement" placeholder="Paid or Not">
+                            </div>
+                            <input class="btn btn-primary btn-block" onclick="makeOrder()" id="OrderSubmit" type="submit" name="Submit" value="Make Order">
+                        </fieldset>
+                    </form>
+                </div>
+                <br>
+            </div>
+</body>
+</html>
